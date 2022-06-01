@@ -1,0 +1,44 @@
+#counter-grid { /* CSS Grid for div formatting */
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 20% 20%;
+    grid-template-rows: 1/2 1/2;
+    gap: 10px;
+    align-items: center;
+    width: 20%;
+    margin: auto;
+}
+
+.counter-gridPart {
+    display: flex; /* Fully center items in the div */
+    justify-content: center;
+    align-items: center; 
+}
+
+#counter-plus-btn { /* Decide positioning of each div within the grid */
+    grid-column: 2;
+    grid-row: 1;
+}
+#counter-minus-btn{
+    grid-column: 2;
+    grid-row: 2;
+}
+#counter-count-div {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+#counter-count {
+    font-size: 100px;
+}
+#counter-reset-div {
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+.counter-btn { /* Button +/- formatting */
+    height: 100%;
+    font-size: 270%;
+    background-color: transparent;
+    border-width: 0;
+}

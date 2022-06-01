@@ -1,0 +1,44 @@
+#todo-new-task {
+    width: 75%;
+}
+
+#todo-add-task {
+    width: 25%;
+}
+
+
+/* .todo-list {
+    display: flex;
+} */
+
+
+.form-check {
+    width: 75%;
+    justify-content: center;
+    margin: auto;
+}
+
+#todo-list-pending {
+    justify-content: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+#todo-list-done {
+    color: gray;
+    font-style: italic;
+    text-decoration: line-through;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+label {
+    text-align: left;
+}
+
+/* .todo-item {
+    display: flex;
+
+} */
