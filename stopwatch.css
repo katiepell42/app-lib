@@ -1,9 +1,0 @@
-#stopwatch-btns-div {
-    display: flex;
-    gap: 5%; /* Leaves space between items */
-}
-
-#stopwatch-display {
-    font-size: 400%;
-}
-
