@@ -1,4 +1,4 @@
-function listLink() {
+function listLink() { // Generates a list of links based on currently deployed apps
     const apps = document.querySelectorAll('.app-title'); // Get all elements of class 'app'
     const app_list = document.getElementById('link-list'); // Get the list of app names
     for(const element of apps) {

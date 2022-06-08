@@ -1,9 +1,12 @@
-// {/* how to */}
+// Used in addNewTaskToList()
+const inputField = document.getElementById("todo-new-task");
+const pendingList = document.getElementById("todo-list-pending");
+
 function clearInputField() {
-    const inputField = document.getElementById("todo-new-task");
     inputField.value = '';
 }
 
+// Used in addNewTaskToList()
 function createNewTask() {
     const todoItem = document.createElement("div"); // Create a div for the list item
     todoItem.classList.add('form-check');
@@ -22,31 +25,21 @@ function createNewTask() {
     todoItem.appendChild(myLabel); // Add it to the list item div
 
     const inputText = document.getElementById("todo-new-task").value // Write task out
-    const labelText = document.createTextNode(inputText)
+    if(inputText == "") {
+        return;
+    }
+    const labelText = document.createTextNode(inputText);
     myLabel.appendChild(labelText);
 
-    return todoItem
+    return todoItem;
 }
 
 function addNewTaskToList(listItem) {
     var listItem = createNewTask(); // Create new task
-    const todoList = document.getElementById("todo-list-pending"); // Add task to incomplete list
-    todoList.appendChild(listItem);
-
+    pendingList.appendChild(listItem);
     clearInputField(); // Make the text field empty again
 }
 
-
-function markTaskDone() { // When the checkbox in a list item div is checked...
-    // Grab the task div and copy it to the done list
-    // Set this div to have italic gray text with strikethrough
-    // Remove the task div from the pending list
-
-    var listItem = createNewTask(); // Create new task - same as before
-    const todoList = document.getElementById("todo-list-done");
-    todoList.appendChild(listItem);
-    console.log("done");
-}
 
 
 document.addEventListener('DOMContentLoaded', function() {
