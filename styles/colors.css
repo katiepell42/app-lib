@@ -5,24 +5,50 @@
     justify-content:space-around;
     height: 25vh;
     width: 100%;
+    /* overflow:  */
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .color-name {
     background-color: white;
     opacity: 50%;
-    padding: 1vh;
-    margin: 5%;
     border-radius: 10px;
     font-size: 100%;
-    width: 50%;
+    /* padding: 10%; */
 }
 
 .color-btn {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 49%;
+    align-items: flex-end; /* Hex name goes at bottom */
+    width: 20%;
     border-radius: 15px;
-    height: 100%;
 }
+
+#select-color-num {
+    width: 25%;
+}
+
+#enter-color-num {
+    width: 10%;
+    border-style: none;
+    background-color: transparent;
+}
+
+#num-colors {
+    display: flex;
+    height: 20%;
+    justify-content: center;
+}
+
+#color-select {
+    height: 10%;
+    text-align: center; /* horizontal alignment */
+    align-items: center; /* vertical alignment */
+    gap: 5px;
+}
+
+.btn-group {
+    width: 50%;
+}
+

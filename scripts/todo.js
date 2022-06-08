@@ -1,10 +1,23 @@
-// Used in addNewTaskToList()
 const inputField = document.getElementById("todo-new-task");
 const pendingList = document.getElementById("todo-list-pending");
+const doneList = document.getElementById("todo-list-done");
 
+// Used in addNewTaskToList()
 function clearInputField() {
     inputField.value = '';
 }
+
+function moveToDone(event) {
+    if(event.target.checked) {
+        let boxParent = checkbox.parentElement; // Get the checkbox's parent
+        doneList.appendChild(boxParent); // Add that parent to the done list
+    }
+    else {
+        let boxParent = checkbox.parentElement; // Get the checkbox's parent
+        doneList.appendChild(boxParent); // Add that parent to the done list
+    }
+}
+
 
 // Used in addNewTaskToList()
 function createNewTask() {
@@ -14,9 +27,9 @@ function createNewTask() {
 
     const myCheckbox = document.createElement("input"); // Create checkbox input
     myCheckbox.type = 'checkbox';
-    // myCheckbox.id = 'flexCheck1';
     myCheckbox.classList.add('form-check-input');
     myCheckbox.value = '';
+    myCheckbox.addEventListener('change', moveToDone);
     todoItem.appendChild(myCheckbox); // Add it to the list item div
 
     const myLabel = document.createElement("label"); // Create checkbox label
@@ -25,7 +38,7 @@ function createNewTask() {
     todoItem.appendChild(myLabel); // Add it to the list item div
 
     const inputText = document.getElementById("todo-new-task").value // Write task out
-    if(inputText == "") {
+    if(inputText == "") { // Don't allow empty tasks
         return;
     }
     const labelText = document.createTextNode(inputText);
@@ -42,20 +55,20 @@ function addNewTaskToList(listItem) {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var checkboxes = document.querySelectorAll('input[type=checkbox][class=form-check-input]');
+    // let checkboxes = document.querySelectorAll('.form-check-input'); // Get all checkboxes
  
-    for (var checkbox of checkboxes)
-    {
-        checkbox.addEventListener('change', function(event) // Whenever the checkbox changes
-        {
-            if (event.target.checked) {
-                // alert(`${e.target.value} is checked`);
-                markTaskDone();
-            }
-            else {
-                alert(`${event.target.value} is unchecked`);
-            }
-        });
-    }
-}, false);
+    // for (var checkbox of checkboxes) // For each of those checkboxes
+    // {
+    //     checkbox.addEventListener('change', function(event) // Whenever the checkbox changes
+    //     {
+    //         if (event.target.checked) {
+    //             let boxParent = checkbox.parentElement; // Get the checkbox's parent
+    //             doneList.appendChild(boxParent); // Add that parent to the done list
+
+    //             markTaskDone();
+    //         }
+    //         else {
+    //             alert(`${event.target.value} is unchecked`);
+    //         }
+    //     });
+    // };

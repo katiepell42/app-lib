@@ -1,3 +1,5 @@
+const colorButtons = document.getElementsByClassName('color-num'); // Get all color # buttons
+
 function listLink() { // Generates a list of links based on currently deployed apps
     const apps = document.querySelectorAll('.app-title'); // Get all elements of class 'app'
     const app_list = document.getElementById('link-list'); // Get the list of app names
@@ -22,3 +24,20 @@ function listLink() { // Generates a list of links based on currently deployed a
         app_list.appendChild(li_element); // Add li to list of links
     }
 }
+
+function loadPage() {
+    // changeColors(); // Change the random colors one time
+    // partitions();
+    // typeLoop(); // Loop the text transition one time
+
+
+    // makeColors(1); 
+}
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     for(let element of colorButtons.childNodes) {
+//         element.addEventListener('click', makeColors(element.value));
+//     }  
+// })
+

@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="styles/template.css">
     <link rel="stylesheet" href="styles/todo.css">
 </head>
-<body onload="listLink()"> <!-- Resets app #1 -->
+<body onload="loadPage()"> <!-- Resets app #1 -->
 <!-- <body onload="loadPage()">  -->
 
     <!-- App library title card -->
+
+    <div id="library">
+
     <div id="intro-card" class="card shadow-lg draggable-element">
         <div class="card-body">
             <div id="library-title-div">
@@ -28,8 +31,6 @@
             </div>
         </div>
     </div>
-
-    <div id="library">
 
     <!-- App #0: Typewriter text animation-->
         <div id="type-app" class="app mini-app shadow-lg">
@@ -51,17 +52,22 @@
             <div id="color-title" class="app-title">
                 <h1 class="text-center">random color generator</h1>
             </div>
-            <div id="color-display" class="app-main">
-                <button class="color-btn" id="color-color1" onclick="changeFirstColor()">
-                    <h2 id="color-name1" class="color-name"></h2>
-                </button>
-                <button class="color-btn" id="color-color2" onclick="changeSecondColor()">
-                    <h2 id="color-name2" class="color-name"></h2>
-                </button>
+            <div class="app-main">
+                <div id="color-select" class="btn-group">
+                    <!-- <h6>number of colors</h6> -->
+                    <button class='color-mum' value = "1" onclick="makeColors(this.value);">1</button>
+                    <button class='color-mum' value = "2" onclick="makeColors(this.value);">2</button>
+                    <button class='color-mum' value = "3" onclick="makeColors(this.value);">3</button>
+                    <button class='color-mum' value = "4" onclick="makeColors(this.value);">4</button>
+                    <button class='color-mum' value = "5" onclick="makeColors(this.value);">5</button>
+                </div>
+                <div id="color-display" class="btn-group">
+
+                </div>
             </div>
-            <div class="app-primary-btn-div app-second">
+            <!-- <div class="app-primary-btn-div app-second">
                 <button class="app-primary-btn" onclick="changeColors()"><h3>new colors</h3></button>
-            </div>
+            </div> -->
 
         </div>
         
@@ -170,6 +176,7 @@
     </div>
     
     <script src="scripts/colors.js"></script>
+    <script src="scripts/colors2.js"></script>
     <script src="scripts/counter.js"></script>
     <script src="scripts/stopwatch.js"></script>
     <script src="scripts/type.js"></script>

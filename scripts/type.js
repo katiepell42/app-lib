@@ -20,6 +20,7 @@ function partitions() {
 }
 
 function typeLoop() {         //  create a loop function
+    // partitions();
     console.log('typeloop')
     // i = 0;
     setTimeout(function() {   //  call a 3s setTimeout when the loop is called
@@ -39,8 +40,3 @@ function reTypeLoop() {
 }
 
 
-function loadPage() {
-    changeColors(); // Change the random colors one time
-    partitions();
-    typeLoop(); // Loop the text transition one time
-}

@@ -1,0 +1,2 @@
+- color generator (up to 5 colors)
+- stopwatch using current time vs start time
