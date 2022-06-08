@@ -3,7 +3,7 @@
 #color-display {
     display: flex;
     justify-content:space-around;
-    height: 25vh;
+    height: 20vh;
     width: 100%;
     /* overflow:  */
     margin-top: 10px;
@@ -14,8 +14,7 @@
     background-color: white;
     opacity: 50%;
     border-radius: 10px;
-    font-size: 100%;
-    /* padding: 10%; */
+    font-size: calc(2vw); /* Makes it work for all sizes of panes (number) */
 }
 
 .color-btn {

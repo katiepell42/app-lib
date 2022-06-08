@@ -29,9 +29,7 @@ function loadPage() {
     // changeColors(); // Change the random colors one time
     // partitions();
     // typeLoop(); // Loop the text transition one time
-
-
-    // makeColors(1); 
+    listLink(); // Dynamically generate 
 }
 
 

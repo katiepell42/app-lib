@@ -20,9 +20,7 @@ function partitions() {
 }
 
 function typeLoop() {         //  create a loop function
-    // partitions();
     console.log('typeloop')
-    // i = 0;
     setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     flashResult.textContent = curr[i];
     console.log(curr[i])

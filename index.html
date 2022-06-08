@@ -15,7 +15,6 @@
 </head>
 <body onload="loadPage()"> <!-- Resets app #1 -->
 <!-- <body onload="loadPage()">  -->
-
     <!-- App library title card -->
 
     <div id="library">
@@ -135,7 +134,7 @@
         </div> -->
 
     <!-- App #5: Todo-list App -->
-        <div class="app shadow-lg" id="todo-app">
+        <!-- <div class="app shadow-lg" id="todo-app">
             <div class="app-title" id="todo-title">
                 <h1 class="text-center">todo list</h1>
             </div>
@@ -155,11 +154,11 @@
             <div class="app-primary-btn-div app-second">
                 <button class="app-primary-btn" onclick=""><h3>reset</h3></button>
             </div>
-        </div>
+        </div> -->
 
         <!-- App Template - Empty -->
         <!-- <div id="template-app" class="app shadow-lg">
-            <div id="counter-title" class="app-title">
+            <div class="app-title">
                 <h1 class="text-center">app-name</h1>
             </div>
             <div class="app-main">
@@ -173,6 +172,28 @@
             </div>
         </div> -->
 
+        <div id="secret-app" class="app shadow-lg">
+            <div id="secret-title" class="app-title">
+                <h1 class="text-center"> secret word app </h1>
+            </div>
+            <div class="app-main">
+                <div id="secret-input">
+                    <input type="text" id="secret-word">
+                    <button id="secret-enter" onclick="secrets()">
+                        go
+                    </button>
+                </div>
+                <h3 id="secret-output"></h3>
+
+            </div>
+            <!-- <div class="app-primary-btn-div app-second">
+                <button class="app-primary-btn" onclick=""><h3>reset</h3></button>
+            </div> -->
+            <!-- <div class="app-second">
+
+            </div> -->
+        </div>
+
     </div>
     
     <script src="scripts/colors.js"></script>
@@ -183,5 +204,6 @@
     <script src="scripts/countdown.js"></script>
     <script src="scripts/todo.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/secret.js"></script>
 </body>
 </html>
