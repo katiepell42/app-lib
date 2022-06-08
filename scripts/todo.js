@@ -28,8 +28,6 @@ function createNewTask() {
     return todoItem
 }
 
-//  createNewTask();
-
 function addNewTaskToList(listItem) {
     var listItem = createNewTask(); // Create new task
     const todoList = document.getElementById("todo-list-pending"); // Add task to incomplete list
@@ -68,13 +66,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 }, false);
-
-
-
-
-// <div class="form-check todo-item">
-// <input class="form-check-input" type="checkbox" value="">
-// <label class="form-check-label" for="flexCheckDefault">
-//   Default checkbox
-// </label>
-// </div>
