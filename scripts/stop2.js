@@ -16,11 +16,13 @@ function startStopwatch() {
         // hours = parseInt(hours);
         var timeNow = new Date; // Current time
         let difference = (timeNow - timeStart)/1000; // Gives the difference --> seconds is diff / 100, ms is (diff % 100)/100
-        
         seconds = difference % 60;
         minutes = Math.floor(difference / 60);
+        if(seconds > 10) {
+            difference = difference / 10;
+        }
         // let secondS = '0' + seconds.toFixed(1);
-        let secDisplay = seconds;
+        let secDisplay = seconds.toFixed(1);
         let minDisplay = minutes;
         let hrDisplay = hours;
         if(seconds < 10) {
