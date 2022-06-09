@@ -22,7 +22,7 @@
     <div id="intro-card" class="card shadow-lg draggable-element">
         <div class="card-body">
             <div id="library-title-div">
-                <h1 id="library-title" class="card-title">katie's app library</h1>
+                <h1 id="library-title" class="card-title display-1">katie's app library</h1>
             </div>
             <div id="link-list-div">
                 <ul id="link-list"  class="list-group">
@@ -71,7 +71,7 @@
         </div>
         
     <!-- App #2: Stopwatch app -->
-        <!-- <div id="stopwatch-app" class="app shadow-lg">
+        <div id="stopwatch-app" class="app shadow-lg">
             <div id="stopwatch-title" class="app-title">
                 <h1 class="text-center">stopwatch</h1>
             </div>
@@ -84,15 +84,15 @@
                         <button class="app-primary-btn" onclick="stopTimer()">stop</button>
                     </div>
                 </div>
-                <div id="stopwatch-display-div" class="stopwatch-btn">
-                    <h1 id="stopwatch-display" class="display-1">00:00:00.0</h1>
-                </div>
+                <!-- <div id="stopwatch-display-div" class="stopwatch-btn"> -->
+                    <h1 id="stopwatch-display">00:00:00.0</h1>
+                <!-- </div> -->
             </div>
             
             <div class="app-primary-btn-div app-second">
                 <button class="app-primary-btn" onclick="resetTimer()"><h3>reset</h3></button>
             </div>
-        </div> -->
+        </div>
 
     <!-- App #3: Counter app -->
         <!-- <div id="counter-app" class="app shadow-lg">
@@ -195,11 +195,34 @@
         </div>
 
     </div>
+
+    <!DOCTYPE html>
+
+    <div>
+        <code>
+            This page has been open for
+            <span id="timeOpen">0</span>
+            seconds
+        </code>
+    
+        <!-- <script>
+            var timeStart = new Date;
+            setInterval( function() {
+                var timeNow = new Date;
+                var secondsOpen = ( timeNow - timeStart ) / 1000;
+                document.getElementById('timeOpen').innerHTML =
+                    Math.floor( secondsOpen );
+            }, 250 );
+        </script>
+    </div> -->
+
+
+
     
     <script src="scripts/colors.js"></script>
-    <script src="scripts/colors2.js"></script>
     <script src="scripts/counter.js"></script>
     <script src="scripts/stopwatch.js"></script>
+    <script src="scripts/stop2.js"></script>
     <script src="scripts/type.js"></script>
     <script src="scripts/countdown.js"></script>
     <script src="scripts/todo.js"></script>

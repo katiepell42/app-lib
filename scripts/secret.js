@@ -1,6 +1,6 @@
 // const secretWord = document.getElementById('secret-word').value; // Input word
 const secretOutput = document.getElementById('secret-output')
-const katiesSecretWord = 'sequester';
+const katiesSecretWord = 'sea star';
 
 function secrets() {
 // Why didn't using constants at the top of the file work for this?

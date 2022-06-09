@@ -4,6 +4,12 @@
 }
 
 #stopwatch-display {
-    font-size: 400%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    /* font-size: 400%; */
+    font-size: 8vw;
 }
 

@@ -14,7 +14,8 @@
     background-color: white;
     opacity: 50%;
     border-radius: 10px;
-    font-size: calc(2vw); /* Makes it work for all sizes of panes (number) */
+    font-style: bold;
+    font-size: calc(1.5vw); /* Makes it work for all sizes of panes (number) */
 }
 
 .color-btn {
@@ -48,6 +49,7 @@
 }
 
 .btn-group {
-    width: 50%;
+    width: 100%;
+    justify-content: space-around;
 }
 
