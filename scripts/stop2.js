@@ -1,53 +1,38 @@
-// var startTime;
-// var stopwatchFlag;
-// var difference;
-
-// function startTimer() {
-//     if(stopwatchFlag) { // If the timer has already been stopped once
-//         difference = 
-//     }
-
-//     else {
-//         startTime = Date.now(); // Assign the starting time
-//     }
-    
-
-// }
-
-// function stopTimer() {
-//     stopwatchFlag = true;
-// }
-
-
-// function resetStopwatch() {
-//     stopwatchFlag = false; // Set the timer to have restarted
-// }
-
-
-
-// // Click start --> NOTE TIME AS startTime
-// // Every millisecond, display now time - startTime
-// // When you hit stop, turn flag to true, stop running the interval
-// // When you hit start, 
-
 var ms = 0;
 var sec = 0;
 var min = 0;
 var hr = 0;
 
-function startTimer() {
+var milliseconds = 0;
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+
+function startStopwatch() {
     var timeStart = new Date; // Original start time
     setInterval(function() {
+        seconds = parseInt(seconds);
+        // minutes = parseInt(minutes);
+        // hours = parseInt(hours);
         var timeNow = new Date; // Current time
-        var sec = (timeNow - timeStart)/1000; // Gives the difference --> seconds is diff / 100, ms is (diff % 100)/100
-
-
+        let difference = (timeNow - timeStart)/1000; // Gives the difference --> seconds is diff / 100, ms is (diff % 100)/100
         
-        if(sec > 10) {
-            min += 1;
-            sec = 0;
+        seconds = difference % 60;
+        minutes = Math.floor(difference / 60);
+        // let secondS = '0' + seconds.toFixed(1);
+        let secDisplay = seconds;
+        let minDisplay = minutes;
+        let hrDisplay = hours;
+        if(seconds < 10) {
+            secDisplay = '0' + seconds.toFixed(1);
         }
-        document.getElementById('timeOpen').innerHTML = min + ':' + sec;
-            // Math.floor(hr) + ':' + Math.floor(min) +':' + Math.floor(sec) + '.' + Math.floor(ms);
+        if(minutes < 10) {
+            minDisplay = '0' + minutes;
+        }
+        if(minutes < 10) {
+            hrDisplay = '0' + hours;
+        }        
+
+        document.getElementById('stopwatch-display').innerHTML = hrDisplay + ':' + minDisplay + ':' + secDisplay;
     }, 100);
 }
